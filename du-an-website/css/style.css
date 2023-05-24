@@ -8,13 +8,37 @@ html {
 }
 #main {
 }
-
+/* code cho thẻ header */
 #header {
   height: 50px;
   background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+/* tệp cha của thanh tìm kiếm  */
+#header .search-button {
+  float: right;
+  display: inline-block;
+}
+/* chỉnh thanh tìm kiếm */
+#header .btn-icon {
+  color: white;
+  font-size: 20px;
+  line-height: 50px;
+  padding: 0 36px 0 36px;
+}
+/* khi chọn phần tử sẽ đổi màu */
+#header .btn-icon:hover {
+  cursor: pointer;
+  color: white !important;
+  background-color: red !important;
 }
 /* code cho tất cả  nav */
 #nav {
+  display: inline-block;
 }
 /* code từ thẻ nav đến thẻ li và thẻ a trong toàn bộ tệp ID=nav */
 #nav > li > a {
@@ -24,17 +48,19 @@ html {
   color: #000;
   font-size: 18px;
 }
+/* code cho thẻ a thuộc tệp con subnav */
 #nav .subnav a {
   color: #000;
   line-height: 38px;
   padding: 0 20px;
   font-size: 16px;
 }
-/* chỉ code cho thẻ li thuộc tệp cha nav */
+/*code cho tất cả thẻ li thuộc tệp cha nav */
 #nav > li {
   display: inline-block;
   text-transform: uppercase;
 }
+/* điều chỉnh tất cả thẻ a(thẻ a nằm trong thẻ li) thuộc tệp cha nav */
 #nav li a {
   color: white;
   text-decoration: none;
@@ -42,16 +68,18 @@ html {
   display: inline-block;
   padding: 0 18px;
 }
-
+/* điều chỉnh (khi chọn phần tử sẽ hiện màu lên)  */
 #nav > li:hover > a,
 #nav .subnav li:hover a {
   color: #000 !important;
   background-color: #ccc !important;
   width: 100%;
 }
+/* ẩn hiện bảng tin trong thẻ subnav */
 #nav > li:hover > .subnav {
   display: block;
 }
+/* điều chỉnh các phần tử trong thẻ subnav */
 #nav .subnav {
   min-width: 160px;
   position: absolute;
@@ -64,10 +92,18 @@ html {
 }
 
 #slide {
-  min-height: 1000px;
+  margin-top: 46px;
+  padding-top: 50%;
+  background: url(./img/img/anh-nui.jpg) top center / cover no-repeat;
+  position: relative;
 }
-/*  */
+#slide .slide-content {
+  position: absolute;
+}
+/* code cho phần nội dung */
 #content {
+  height: 1000px;
+  background-color: tomato;
 }
 
 #footer {
